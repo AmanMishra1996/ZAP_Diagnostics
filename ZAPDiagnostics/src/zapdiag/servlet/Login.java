@@ -62,18 +62,28 @@ public class Login extends HttpServlet {
 				String utype = rs.getString("usertype");
 				
 				if(utype.equals("owner")) {
-					response.sendRedirect("/ZAPDiagnostics/jsp/adminhome.jsp");
+					response.sendRedirect("/ZAPDiagnostics/jsp/ownerhome.jsp");
 				}
 				
-				if(utype.equals("manager")) {
-					response.sendRedirect("/touristportal/jsp/managerhome.jsp");
+				if(utype.equals("superadmin")) {
+					response.sendRedirect("/ZAPDiagnostics/jsp/superadminhome.jsp");
 				}
 				
-				if(utype.equals("tourist")) {
-					response.sendRedirect("/touristportal/jsp/touristhome.jsp");
-					
-					
+				if(utype.equals("admin")) {
+					response.sendRedirect("/ZAPDiagnostics/jsp/adminhome.jsp");	
+				}
+				
+				if(utype.equals("doctor")) {
+					response.sendRedirect("/ZAPDiagnostics/jsp/doctorhome.jsp");	
 				}	
+				
+				if(utype.equals("worker")) {
+					response.sendRedirect("/ZAPDiagnostics/jsp/workerhome.jsp");	
+				}	
+				
+				if(utype.equals("patient")) {
+					response.sendRedirect("/ZAPDiagnostics/jsp/patienthome.jsp");	
+				}
 				
 				
 			}

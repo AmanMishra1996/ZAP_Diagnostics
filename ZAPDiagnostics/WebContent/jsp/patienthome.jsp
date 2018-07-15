@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+    <%@ page import="java.sql.*,zapdiag.dbutils.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +12,9 @@
 </head>
 <body>
 
+<%@include file="/WEB-INF/patientmenu.html"%>
 
-
-<%
+ <%
 HttpSession hs= request.getSession(false); 
 String userid = (String)hs.getAttribute("userkey");//downcasting
 /* userid= userid.toUpperCase(); */
@@ -20,36 +22,20 @@ String userid = (String)hs.getAttribute("userkey");//downcasting
 
 
 
-<div id="parent" style="width:100%;height:auto;">
-	<div id="pHeader" style="width:100%;height:auto;background-color: red;">
-		<h2  >Hello :<%=userid %> </h2>
-		 
-		
+
+<div id="parent">
+	<div id="pHeader">
+		<h2 style="margin-top: 40px" >Hello :<%=userid %> </h2>
 	</div>
-	<div id="pBody" style="width:100%;height:auto;">
-		<div id="pBodyMenu" style="width:20%;height:auto;float:left;background-color: yellow;">
-			<%@include file="/WEB-INF/adminmenu.html"%>
+	<div id="pBody">
+		<div id="pBodyMenu">
+			
 		</div>
-		<div id="pBodyContent" style="width:80%;height:auto;float:left;background-color: cyan"></div>
+		<div id="pBodyContent"></div>
 	</div>
-	<div id="pFooter" style="width:100%;height:auto;"></div>
+	<div id="pFooter"></div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

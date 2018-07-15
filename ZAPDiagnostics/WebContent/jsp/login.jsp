@@ -59,17 +59,9 @@
 			</tr>
 			<tr><td><span id = "printError"></span></td></tr>
 			<tr><td><span id = "printErrors"></span></td></tr>
-			
-			 
-			
-			
-			</table>
-		    
-		    
-		    
-		    
-		    
+
+			</table>		      
 		</form>
-	  	</div>
+	 </div>
 </body>
 </html>
