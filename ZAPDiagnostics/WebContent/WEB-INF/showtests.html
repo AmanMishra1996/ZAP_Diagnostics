@@ -1,0 +1,13 @@
+<div style="width:42%;height:auto; background-color: white;box-shadow: 0 0 20px rgba(33,33,33,2);border-radius:10px; float:left;margin-left: 5%; padding:4px 4px 4px 4px;overflow: hidden;margin-bottom: 1%;float:left">
+				         <table class="table table-bordered table-dark table-striped table-hover" style="width:100% ;margin-top: ">       
+				         <tbody>
+									      		<tr> <th> Test Id : </th>   	<th><%=rs.getString("testId") %></th> 		</tr>
+									      		<tr> <th> Pathology Id : </th>  <th><%=rs.getString("pathologyId") %></th> 		</tr>
+									      		<tr> <th> Test Name : </th>   	<th><%=rs.getString("testName") %></th> 		</tr>
+									      		<tr> <th> Conditions : </th>  	<th><%=rs.getString("conditions") %></th> 		</tr>
+									      		<tr> <th> Charges : </th>   	<th><%=rs.getString("charges") %></th> 		</tr>
+									      		<tr><th colspan="2"><a href="/ZAPDiagnostics/jsp/bookappointment.jsp?test_id=<%=rs.getString("testId") %>" ><h4> Click Here To Schedule An Appointment</h4>  </a>    </th></tr>
+					
+						 </tbody>       
+				        </table>
+</div>

@@ -21,9 +21,7 @@ public class Login extends HttpServlet {
 	private Connection cn;
 	private PreparedStatement pslogin;
 	private ResultSet rs;
-	
-       
-    
+
     public Login() {
         super();
         // TODO Auto-generated constructor stub
@@ -38,51 +36,59 @@ public class Login extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-	String ui=	request.getParameter("txtuserid");
-	String up=	request.getParameter("txtuserpass");
+	String userid=	request.getParameter("userid");
+	String userpassword=	request.getParameter("userpass");
 	
-	System.out.println(ui);
-	System.out.println(up);
+	System.out.println(userid);
+	System.out.println(userpassword);
 	cn=CrudOperation.createConnection();
 	String strsql="select * from logininfo where userId=? and userPass=?";
 	try {
 		pslogin=cn.prepareStatement(strsql);
-		pslogin.setString(1, ui);
-		pslogin.setString(2, up);
+		pslogin.setString(1, userid);
+		pslogin.setString(2, userpassword);
 		
 		rs=pslogin.executeQuery();
 		
 			if(rs.next()) {
 				
-				HttpSession hs = request.getSession();//new session created
-						hs.setAttribute("userkey", ui);
+				HttpSession httpsession = request.getSession();//new session created
+				httpsession.setAttribute("userkey", userid);
+				
 				
 
 				
 				String utype = rs.getString("usertype");
 				
-				if(utype.equals("owner")) {
-					response.sendRedirect("/ZAPDiagnostics/jsp/ownerhome.jsp");
-				}
-				
+				httpsession.setAttribute("userkey_for_usertypevalidation", utype);
 				if(utype.equals("superadmin")) {
+					//httpsession.setAttribute("userkey_for_usertypevalidation", utype);
 					response.sendRedirect("/ZAPDiagnostics/jsp/superadminhome.jsp");
+					
 				}
 				
 				if(utype.equals("admin")) {
+					//httpsession.setAttribute("userkey_for_usertypevalidation", utype);
 					response.sendRedirect("/ZAPDiagnostics/jsp/adminhome.jsp");	
+					
 				}
 				
 				if(utype.equals("doctor")) {
-					response.sendRedirect("/ZAPDiagnostics/jsp/doctorhome.jsp");	
+					//httpsession.setAttribute("userkey_for_usertypevalidation", utype);
+					response.sendRedirect("/ZAPDiagnostics/jsp/doctorhome.jsp");
+					
 				}	
 				
 				if(utype.equals("worker")) {
+					//httpsession.setAttribute("userkey_for_usertypevalidation", utype);
 					response.sendRedirect("/ZAPDiagnostics/jsp/workerhome.jsp");	
+					
 				}	
 				
 				if(utype.equals("patient")) {
+					//httpsession.setAttribute("userkey_for_usertypevalidation", utype);
 					response.sendRedirect("/ZAPDiagnostics/jsp/patienthome.jsp");	
+					
 				}
 				
 				

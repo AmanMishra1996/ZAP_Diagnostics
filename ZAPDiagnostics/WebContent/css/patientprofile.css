@@ -1,0 +1,157 @@
+
+		body{
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		nav{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100px;
+			padding: 10px 100px;
+			box-sizing: border-box;
+			transition: .3s;
+		}
+		nav.black{
+			background: rgba(0,0,0,0.8);
+			height: 100px;
+			padding: 10px 100px;
+		}
+		nav .logo img{
+			padding: 15px 20px;
+			height: 50px;
+			float: left;
+			transition: .3s;
+			color: white;
+		}
+		nav.black .logo{
+			color: #fff;
+		}
+		nav ul{
+			list-style: none;
+			float: right;
+			margin:0;
+			padding: 0;
+			display: flex;
+		}
+		nav ul li{
+			list-style: none;
+			color: white;
+		}
+		nav ul li a{
+			line-height: 80px;
+			color: white;
+			padding: 12px 30px;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: .3s;
+
+		}
+		nav .black ul li a{
+			color: #fff;
+		}
+		nav ul li a:focus{
+			outline: none;
+		}
+		nav ul li a.active{
+			background: #e2472f;
+			color: #fff;
+			border-radius: 6px;
+		}
+		/*top section image
+		--------------------*/
+		section.sec1{
+			width: 100%;
+			height: 500px;
+			background: url(/ZAPDiagnostics/images/patient.png);
+			background-size: cover;
+			background-position: center;
+			color: white;
+			text-align:;
+		}
+		/*options for patients
+		-----------------------*/
+		a{
+			text-decoration: none;
+		}
+		section.sec2{
+			padding: 22px 20px;
+			width: 100%;
+			height: 40px;
+			font-size: 30px;
+			font-family: sans-serif;
+			text-align: center;
+
+		}
+
+		section.sec3{
+			width: 90%;
+			height: 800px;
+			background: white;
+			margin-left: 5%;
+			box-shadow: 0 0 20px rgba(33,33,33,2); 
+			
+		}
+		.s1{
+			width: 35%;
+			overflow: hidden;
+			font-size: 15px;
+			padding: 8px;
+			margin-left: 150px;
+			float: left;
+			color: black;
+		}
+		.s2{
+			width: 35%;
+			overflow: hidden;
+			font-size: 15px;
+			padding: 8px;
+			margin-right: 100px;
+			float: right;
+			color: grey;
+		}
+		.patient_id{
+			width: 100%;
+			height: 100px;
+			background: white;
+		}
+		.patient_name{
+			width: 100%;
+			height: 100px;
+			background: white;
+		}
+		.patient_address{
+			width: 100%;
+			height: 200px;
+			background: white;
+		}
+		.patient_phone{
+			width: 100%;
+			height: 100px;
+			background: white;
+		}
+		.patient_email{
+			width: 100%;
+			height: 100px;
+			background: white;
+		}
+		.regdate{
+			width: 100%;
+			height: 100px;
+			background: white;
+		}	
+		
+		.btn button
+		{
+			width: 25%;
+			background: none;
+			border: 1px solid #F8E71C;
+			font-size: 30px;
+			color: black;
+			padding: 5px;
+			margin-left: 35%;
+		}
+	

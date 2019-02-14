@@ -1,0 +1,434 @@
+
+		body{
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			font-family: Quicksand;
+		}
+		/*	nav bar
+		------------------*/
+		nav{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100px;
+			padding: 10px 100px;
+			box-sizing: border-box;
+			transition: .3s;
+		}
+		nav.black{
+			background: rgba(0,0,0,0.8);
+			height: 100px;
+			padding: 10px 100px;
+		}
+		nav .logo img{
+			padding: 15px 20px;
+			height: 50px;
+			float: left;
+			transition: .3s;
+			color: white;
+		}
+		nav.black .logo{
+			color: #fff;
+		}
+		nav ul{
+			list-style: none;
+			float: right;
+			margin:0;
+			padding: 0;
+			display: flex;
+		}
+		nav ul li{
+			list-style: none;
+			color: white;
+		}
+		nav ul li a{
+			line-height: 80px;
+			color: white;
+			padding: 12px 30px;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: .3s;
+
+		}
+		nav .black ul li a{
+			color: #fff;
+		}
+		nav ul li a:focus{
+			outline: none;
+		}
+		nav ul li a.active{
+			background: #e2472f;
+			color: #fff;
+			border-radius: 6px;
+		}
+
+#menu-v li, #menu-v a {zoom:1;} /* Hacks for IE6, IE7 */
+#menu-v, #menu-v ul
+{
+    width: 7%; /* Main Menu Item widths */
+    border: 1px solid #ccc;
+    border-top:none;
+    position: fixed; font-size:0;
+    list-style: none; margin-top:  300px; padding: 0; display:block;
+    z-index:9;
+}
+                
+/* Top level menu links style
+---------------------------------------*/
+
+#menu-v li
+{
+    background: #FFF url(/ZAPDiagnostics/images/bg.gif) repeat-x 0 2px;
+    list-style: none; margin-top: 0; padding: 0;
+}
+#menu-v li a
+{
+    font: normal 12px Arial;
+    border-top: 1px solid #ccc;
+    display: block;
+    /*overflow: auto; force hasLayout in IE7 */
+    color: black;
+    text-decoration: none;
+    line-height:26px;
+    padding-left:26px; 
+    padding-top: 6px;           
+}
+#menu-v ul li a
+{
+    line-height:30px;
+}
+                
+#menu-v li a.arrow:hover
+{
+    background-image:url(/ZAPDiagnostics/images/arrowon.gif);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+}
+        
+/*Sub level menu items
+---------------------------------------*/
+#menu-v li ul
+{
+    position: absolute;
+    width: 200px; /*Sub Menu Items width */
+    visibility:hidden;
+}
+        
+#menu-v a.arrow
+{
+    background-image:url(/ZAPDiagnostics/images/arrow.gif);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+}
+#menu-v li:hover, #menu-v li.onhover
+{
+    background-position:0 -62px;
+}
+#menu-v ul li
+{
+    background: rgba(255, 255, 255, 0.86);
+    background-image:none;
+}
+#menu-v ul li:hover, #menu-v ul li.onhover
+{
+    background: #FFF;
+    background-image:none;
+}
+        
+/* Holly Hack for IE \
+* html #menu-v  li
+{
+    float:left;
+    height: 1%;
+}
+* html #menu-v  li a
+{
+    height: 1%;
+}*/
+/* End */
+
+
+	/*top section image
+	---------------------*/
+		section.sec1{
+			width: 100%;
+			height: 100vh;
+			background: url(/ZAPDiagnostics/images/path1.jpg);
+			background-size: cover;
+			background-position: center;
+			color: white;
+			text-align:;
+		}
+
+
+
+		/*Our Services
+		------------------*/
+		section.sec2{
+			padding: 22px 20px;
+			width: 100%;
+			height: 40px;
+			font-size: 30px;
+			font-family: sans-serif;
+			text-align: center;
+			margin-bottom: 20px;
+
+		}
+		
+		section.sec3{
+			width: 100%;
+			height: 280px;
+			background: grey;
+		}
+		.serv{
+			
+			width: 100%;
+			height: 300px;
+			background: black; 
+		}
+		.s1{
+			transition: box-shadow .3s;
+			width: 25%;
+			height: 100%;
+			color: white;
+			float: left;
+		}
+		.s1 img{
+			width: 100%;
+			height: 100%;
+		}
+		.s2{
+			transition: box-shadow .3s;
+			width: 25%;
+			height: 100%;
+			color: white;
+			float: right;
+		}
+		.s2 img{
+			width: 100%;
+			height: 100%;
+		}
+		.s3{
+			transition: box-shadow .3s;
+			width: 25%;
+			height: 100%;
+			color: white;
+			float: left;
+		}
+		.s3 img{
+			width: 100%;
+			height: 100%;
+		}
+		.s4{
+			transition: box-shadow .3s;
+			width: 25%;
+			height: 100%;
+			color: white;
+			float: right;
+		}
+		.s4 img{
+			width: 100%;
+			height: 100%;
+		}
+		.s1:hover
+		 {
+  			box-shadow: 0 0 20px rgba(33,33,33,2); 
+		 }
+		 .s2:hover
+		 {
+  			box-shadow: 0 0 20px rgba(33,33,33,2); 
+		 }
+		 .s3:hover
+		 {
+  			box-shadow: 0 0 20px rgba(33,33,33,2); 
+		 }
+		 .s4:hover
+		 {
+  			box-shadow: 0 0 20px rgba(33,33,33,2); 
+		 }
+		/*News
+		-------*/
+
+		section.sec4{
+			width: 100%;
+			height: 500px;
+			background: lightgreen;
+		}
+		.feeds{
+			width: 100%;
+			height: auto%;
+			background: skyblue;
+		}
+		.news{
+			width: 100%;
+			height: 100%;
+			
+			text-align: center;
+		}
+		.news h2{
+			
+			font-size: 22px;
+			font-family: sans-serif;
+		}
+		/*Location & Tips
+		-----------------*/
+			section.sec5{
+			width: 100%;
+			height: 500px;
+			margin-top: 80px;
+			
+		}	
+		.loc_tips{
+			width: 100%;
+			height: 100%;
+			background: white;
+		}
+		/* .location{
+			width: 50%;
+			height: 100%;
+			text-align: center;
+			float: left;
+		} */
+		/* .location h2{
+			font-size: 22px;
+			font-family: sans-serif;
+		} */
+		.tips{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			float: left;
+		}
+		.tips h2{
+			font-family: sans-serif;
+			font-size: 22px;
+		}
+		/*footer
+		--------*/
+		section.sec6{
+		    margin-top:33px;
+			width: 100%;
+			height: 20vh;
+			background: grey;
+		}
+		.footer{
+		    margin-top:3%;
+			width: 100%;
+			height: 100%;
+			background: black;
+			
+		}
+			   .ele1{
+			margin-top: 10px;
+			margin-left: 10px;
+			width: 25%;
+			height: 90%;
+			color: white;
+			float: left;
+		}
+		.ele1 h2{
+			font-size: 14px;
+			font-family: 'Open Sans',sans-serif;
+			font-weight: 600;
+		}
+		.component ul li{
+			background: url(/ZAPDiagnostics/images/li.png) 0 11px no-repeat;
+	        padding: 3px 0 3px 22px;
+			font-family: 'Open Sans',sans-serif;
+			list-style: none;
+			color: white;
+			    
+		}
+		.ele1 a{
+			text-decoration: none;
+			list-style: none;
+			color: white;
+		    display: list-item;
+		    text-align: -webkit-match-parent;
+			}
+
+		.ele2{
+			margin-top: 10px;
+			width: 25%;
+			height: 90%;
+			color: white;
+			float: left;
+		}
+		.ele2 h2{
+			font-size: 14px;
+			font-family: 'Open Sans',sans-serif;
+			font-weight: 600;
+		}
+		.ele2 a{
+			text-decoration: none;
+			list-style: none;
+			color: white;
+		    display: list-item;
+		    text-align: -webkit-match-parent;
+			}
+		.ele3{
+			margin-top: 10px;
+			width: 25%;
+			height: 90%;
+			color: white;
+			float: left;
+		}
+		.ele3 h2{
+			font-size: 14px;
+			font-family: 'Open Sans',sans-serif;
+			font-weight: 600;
+		}
+		.ele3 a{
+			text-decoration: none;
+			list-style: none;
+			color: white;
+		    display: list-item;
+		    text-align: -webkit-match-parent;
+			}
+
+	   
+
+		/*display resolution
+		------------------------*/
+		
+		
+		@media screen and (max-width: 760px)
+		{
+
+		nav ul li a{
+			font-size: 15px;
+		}
+		
+	}
+		@media screen and (max-width: 695px)
+		{
+				nav ul li a{
+					margin-left: 0px;
+			line-height: 80px;
+			color: white;
+			padding: 8px 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: .3s;
+			font-size: 15px;
+			}
+		}
+		@media screen and (max-width: 614px)
+		{
+		nav ul li a{
+			margin-left: 0px;
+			line-height: 80px;
+			color: white;
+			padding: 8px 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: .3s;
+			font-size: 15px;
+			}
+		}
+
+
+	
